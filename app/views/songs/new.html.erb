@@ -11,7 +11,7 @@
 
   <%= f.text_field :genre_name, list: "genres_autocomplete" %>
  <datalist id="genres_autocomplete">
-   <% Category.all.each do |category| %>
+   <% Genre.all.each do |genre| %>
      <option value="<%= category.name %>">
    <% end %>
  </datalist>
