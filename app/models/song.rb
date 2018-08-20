@@ -8,6 +8,6 @@ class Song < ActiveRecord::Base
   end
 
   def genre_name
-    Genre.find_by_id(self.genre_id)
+    Genre.find_by_id(params[:genre_name])
   end
 end
