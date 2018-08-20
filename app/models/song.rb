@@ -8,6 +8,6 @@ class Song < ActiveRecord::Base
   end
 
   def genre_name
-    Genre.find_or_create_by(params[:genre_name])
+    Genre.find_or_create_by(name: :genre_name])
   end
 end
