@@ -7,6 +7,10 @@ class Song < ActiveRecord::Base
     Artist.find_or_create_by(name: params[:song][:artist_name])
   end
 
+  def artist_name
+    self.category ? self.category.name : nil
+  end
+
   def genre_name
     Genre.find_or_create_by(name: params[:song][:genre_name])
   end
