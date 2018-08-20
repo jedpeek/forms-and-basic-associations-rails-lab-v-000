@@ -6,7 +6,7 @@ class Song < ActiveRecord::Base
   def artist_name=(name)
     artist = Artist.find_or_create_by(name: name)
     self.artist = artist
-    
+
   end
 
   def artist_name
@@ -14,7 +14,8 @@ class Song < ActiveRecord::Base
   end
 
   def genre_name=(name)
-    Genre.find_or_create_by(name: name)
+    genre = Genre.find_or_create_by(name: name)
+    self.genre = genre
   end
 
   def genre_name
