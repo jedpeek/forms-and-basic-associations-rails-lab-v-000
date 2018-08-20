@@ -4,7 +4,7 @@ class Song < ActiveRecord::Base
   has_many :notes
 
   def artist_name=(name)
-    Artist.find_or_create_by(name: params[:artist_name])
+    Artist.find_or_create_by(name: name)
   end
 
   def artist_name
