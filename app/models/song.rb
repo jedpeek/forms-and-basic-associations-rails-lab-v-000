@@ -22,10 +22,10 @@ class Song < ActiveRecord::Base
     self.genre ? self.genre.name : nil
   end
 
-    def note_contents=(notes)
+  def note_contents=(notes)
     notes.each do |content|
       if content.strip != ''
-        note = self.notes.build(content: content)
+        self.notes.build(content: content)
       end
     end
   end
@@ -33,5 +33,4 @@ class Song < ActiveRecord::Base
   def note_contents
     self.notes.map(&:content)
   end
-
 end
