@@ -8,7 +8,7 @@
   <%= f.label :artist_name %>
   <%= f.text_field :artist_name %>
   <br />
-  <%= f.label :genre_name %>
+  <%= f.label :song_genre_id %>
   <%= f.collection_select :genre_name, Genre.all, :name, :name %>
    <br />
    <%= f.label :song_notes_1 %>
